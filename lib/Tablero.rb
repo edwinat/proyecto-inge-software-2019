@@ -11,6 +11,9 @@ class Tablero
     def obtenerAltura()
         return @altura
     end
+    def establecerAuto(nuevoAuto)
+        @auto=nuevoAuto
+    end
     def establecerTablero(base,altura)
         @base=base
         @altura=altura

@@ -17,3 +17,4 @@ Feature:
     Given visito la pagina principal
     And presiono el boton "aceptar"
     Then deberia haber el boton de girar "abajo"
+    

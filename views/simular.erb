@@ -22,27 +22,43 @@
         <img id="myDiv" src="mario2.jpg" width="50" height="50" >
    </div>
 
-<form>
+<form method='post' action='/avanzar'>
     <%# <button type="button" onclick="myFunctionA()">adelante</button> %>
+    <input type='number' name='posicionActualX' value="<%= @posicionX %>" hidden>
+    <input type='number' name='posicionActualY' value="<%= @posicionY %>" hidden>
+    <input type='text' name='orientacionActual' value="<%= @orientacionNueva %>" hidden>
     <input type="submit" onclick="myFunctionA()" value="adelante">
 </form>
-<form>
-<%# <button type="button" onclick="myFunctionI()">arriba</button> %>
+
+<form method='post' action='/izquierda'>
+    <%# <button type="button" onclick="myFunctionI()">arriba</button> %>
+    <input type='number' name='posicionActualX' value="<%= @posicionX %>" hidden>
+    <input type='number' name='posicionActualY' value="<%= @posicionY %>" hidden>
+    <input type='text' name='orientacionActual' value="<%= @orientacionNueva %>" hidden>
     <input type="submit" onclick="myFunctionI()" value="arriba">
 </form>
-<form>
-<%# <button type="button" onclick="myFunctionD()">abajo</button> %>
+
+<form method='post' action='/derecha'>
+    <%# <button type="button" onclick="myFunctionD()">abajo</button> %>
+    <input type='number' name='posicionActualX' value="<%= @posicionX %>" hidden>
+    <input type='number' name='posicionActualY' value="<%= @posicionY %>" hidden>
+    <input type='text' name='orientacionActual' value="<%= @orientacionNueva %>" hidden>
     <input type="submit" onclick="myFunctionD()" value="abajo">
 </form>
 
 
-
+    <p id="m" hidden>Holaa</p>
+    
     <script>
     function obtenerDatos() {
         let datosX="<%= @posicionX %>";
-        //console.log(datosX);
+        console.log(datosX);
         let datosY="<%= @posicionY %>";
-        //console.log(datosY);
+        console.log(datosY);
+
+        let a=document.getElementById("m").textContent;
+        console.log(a);
+  
         enviardatos({datosX,datosY});
     }
 

@@ -6,7 +6,7 @@ Feature:
                 Scenario:
         Given visito la pagina principal
         And presiono el boton "aceptar"
-        Then deberia haber una "mario2.jpg" por defecto
+        Then deberia haber una "tablero.jpg" por defecto
 
         # Scenario:
         # Given visito la pagina principal

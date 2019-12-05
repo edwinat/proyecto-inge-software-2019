@@ -12,4 +12,4 @@ Feature:
         When ingreso el "nombre" del jugador "juan"
         And presiono el boton "aceptar"
         Then deberia haber un mensaje bienvenido jugador "juan"
-        Then deberia haber una "tablero.jpg" por defecto
+        Then deberia haber una "mario2.jpg" por defecto

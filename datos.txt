@@ -1,0 +1,15 @@
+Detalles del problema:
+- El robot avanza paso a paso
+- Al girar la orientacion se mantiene en la misma posicion, solo cambia la orientacion
+- capturar los movimientos del auto
+
+inresar:
+- posicion inicial del auto
+- secuencia de movimientos
+- agregar mas autos
+
+Datos a consideras
+- pruebas de aceptacion mas los criterios (cucumber)
+- pruebas de unidad menor (rspec)
+
+

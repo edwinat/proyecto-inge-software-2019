@@ -29,4 +29,8 @@ class Auto
     def avanzarDerecha()
         @posicionY=@posicionY-1
     end
+
+    def hola
+        "holaaaa"
+    end
 end

@@ -47,13 +47,18 @@
 </form>
 
 
-
+    <p id="m" hidden>Holaa</p>
+    
     <script>
     function obtenerDatos() {
         let datosX="<%= @posicionX %>";
         console.log(datosX);
         let datosY="<%= @posicionY %>";
         console.log(datosY);
+
+        let a=document.getElementById("m").textContent;
+        console.log(a);
+  
         enviardatos({datosX,datosY});
     }
 

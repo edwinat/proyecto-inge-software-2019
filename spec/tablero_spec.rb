@@ -1,4 +1,5 @@
 require 'Tablero'
+require 'Auto'
 RSpec.describe Tablero do
     it 'al crear tablero tiene un tamaño por defecto 6x8 ver su base 8' do
         tablero=Tablero.new
@@ -55,6 +56,13 @@ RSpec.describe Tablero do
         tablero.establecerTablero(5,5)
         expect(tablero.obtenerBase()).to eq(5)
         expect(tablero.obtenerAltura()).to eq(5)
+    end
+
+    it 'agregar un auto al tablero ' do
+        tablero=Tablero.new
+        auto=Auto.new
+        tablero.establecerAuto(auto)
+        expect(tablero.obtenerAuto()).to eq(auto)
     end
 
 end

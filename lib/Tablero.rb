@@ -1,4 +1,4 @@
-require 'Auto'
+require './lib/Auto'
 class Tablero
     def initialize
         @base=8

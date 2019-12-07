@@ -29,7 +29,7 @@ post '/avanzar' do
     @posicionX=$automovil.obtenerX()
     @posicionY=$automovil.obtenerY()
     erb:simular
-  end
+end
 
   post '/izquierda' do
     @orientacionNueva=params[:orientacionActual]

@@ -58,5 +58,24 @@ class Auto
             @posicionY=@posicionY+1
         end
     end
+    def avanzarSimple(letra)
+        if(letra == "A")
+            avanzarAdelante()
+        end
+        if(letra == "I")
+            girarIzquierda()
+            avanzarAdelante()
+        end
+        if(letra == "D")
+            girarDerecha()
+            avanzarAdelante()
+        end
+    end
+    def avanzarAvanzado(letras)
+        for i in(0..letras.length)
+            avanzarSimple(letras[i])
+        end
+    end
+
 
 end

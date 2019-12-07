@@ -66,16 +66,17 @@ class Auto
         end
     end
     def avanzarSimple(letra)
-        if(letra == "A")
+        
+        case letra
+        when 'A'
             avanzarAdelante()
-        end
-        if(letra == "I")
+        when 'I'
             girarIzquierda()
             avanzarAdelante()
-        end
-        if(letra == "D")
+        when 'D'
             girarDerecha()
             avanzarAdelante()
+        
         end
     end
     def avanzarAvanzado(letras)

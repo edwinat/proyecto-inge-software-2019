@@ -37,6 +37,7 @@ RSpec.describe Auto do
         @auto.girarIzquierda()
         expect(@auto.obtenerOrientacion()).to eq("Este")
     end
+    
     it 'si el auto esta al "Norte" al girar izquierda deberia mirar al "Oeste"' do
         @auto.establecerPosicionOrientacion(0,0,"Norte")
         @auto.girarIzquierda()

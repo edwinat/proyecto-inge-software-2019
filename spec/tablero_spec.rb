@@ -56,6 +56,22 @@ RSpec.describe Tablero do
         
 
       end
+      it 'verificar si el auto esta fuera del tablero de la parte derecha con un True' do
+        
+          
+        @auto.establecerPosicionOrientacion(5,0,"Este")
+        expect(@tablero.verificarBordes(@auto)).to eq(true)
+      
+
+    end
+    it 'verificar si el auto esta fuera del tablero de la parte derecha con un True' do
+        
+          
+        @auto.establecerPosicionOrientacion(0,5,"Este")
+        expect(@tablero.verificarBordes(@auto)).to eq(true)
+      
+
+    end
     
       it 'al establecer Ancho 5 y altura 5 del tablero ' do
         

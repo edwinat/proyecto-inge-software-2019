@@ -2,11 +2,18 @@ require './lib/Auto'
 RSpec.describe Auto do
     before(:each) do 
         @auto=Auto.new
+        @auto.establecerNombre("auto")
         @auto.establecerPosicionOrientacion(1,1,"Este")
     end
 
     it 'al crear el auto este en la posicion x igual 1' do
         expect(@auto.obtenerX()).to eq(1)
+    end
+    it 'al crear el auto esta con el nombre "auto"' do
+        expect(@auto.obtenerNombre()).to eq("auto")
+    end
+    it 'establecer nombre del auto "cadilack"' do
+        expect(@auto.establecerNombre("cadilack")).to eq("cadilack")
     end
     it 'al crear el auto este en la posicion y igual 1' do
         expect(@auto.obtenerY()).to eq(1)
@@ -139,6 +146,7 @@ RSpec.describe Auto do
         expect(@auto.obtenerOrientacion).to eq("Este")
         
     end
+
 
     
     

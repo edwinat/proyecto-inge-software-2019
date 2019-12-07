@@ -3,6 +3,7 @@ class Auto
         @posicionX=0
         @posicionY=0
         @orientacion="Este"
+        @nombre="auto" 
     end
     
     def obtenerX()
@@ -13,6 +14,12 @@ class Auto
     end
     def obtenerOrientacion()
         return @orientacion
+    end
+    def obtenerNombre()
+        return @nombre
+    end
+    def establecerNombre(nom)
+         @nombre=nom
     end
     def establecerPosicionOrientacion(x,y,orientacion)
         @posicionX=x

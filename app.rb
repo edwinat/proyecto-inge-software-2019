@@ -5,7 +5,7 @@ require './lib/Auto'
 #Inizialisamos el tablero con el auto
 $tablero=Tablero.new
 $automovil=Auto.new
-$tablero.establecerAuto($automovil)
+
 $coordenada_X=$automovil.obtenerX()
 $coordenada_Y=$automovil.obtenerY()
 $orientacion=$automovil.obtenerOrientacion()
@@ -24,8 +24,8 @@ end
 
 post '/avanzar' do
     @orientacionNueva=params[:orientacionActual]
-    $automovil.establecerPosicion(params[:posicionActualX].to_i,params[:posicionActualY].to_i)
-    $automovil.avanzarAdelante()
+    $automovil.establecerPosicionOrientacion(params[:posicionActualX].to_i,params[:posicionActualY].to_i,params[:orientacionActual])
+    $automovil.avanzarAvanzado("A")
     @posicionX=$automovil.obtenerX()
     @posicionY=$automovil.obtenerY()
     erb:simular
@@ -33,8 +33,8 @@ end
 
   post '/izquierda' do
     @orientacionNueva=params[:orientacionActual]
-    $automovil.establecerPosicion(params[:posicionActualX].to_i,params[:posicionActualY].to_i)
-    $automovil.avanzarIzquierda()
+    $automovil.establecerPosicionOrientacion(params[:posicionActualX].to_i,params[:posicionActualY].to_i,params[:orientacionActual])
+    $automovil.avanzarAvanzado("I")
     @posicionX=$automovil.obtenerX()
     @posicionY=$automovil.obtenerY()
     erb:simular
@@ -42,8 +42,8 @@ end
 
   post '/derecha' do
     @orientacionNueva=params[:orientacionActual]
-    $automovil.establecerPosicion(params[:posicionActualX].to_i,params[:posicionActualY].to_i)
-    $automovil.avanzarDerecha()
+    $automovil.establecerPosicionOrientacion(params[:posicionActualX].to_i,params[:posicionActualY].to_i,params[:orientacionActual])
+    $automovil.avanzarAvanzado("D")
     @posicionX=$automovil.obtenerX()
     @posicionY=$automovil.obtenerY()
     erb:simular

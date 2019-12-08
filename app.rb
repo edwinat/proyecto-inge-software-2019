@@ -5,9 +5,8 @@ require './lib/Auto'
 #Inizialisamos el tablero con el auto
 $tablero=Tablero.new
 $automovil=Auto.new
+$lista_autos=Array.new
 
-$coordenada_X=$automovil.obtenerX()
-$coordenada_Y=$automovil.obtenerY()
 $orientacion=$automovil.obtenerOrientacion()
 #------------Controller----------------
 get '/' do
@@ -16,13 +15,19 @@ end
 
 post '/configuracion' do
     @nombre=params[:nombre]
+
     erb:ajustes
 end
 
-get '/configuracion' do
-    erb:ajustes
+post '/simulacion' do
+    $automovil.establecerPosicionOrientacion(params[:posicionActualX].to_i,params[:posicionActualY].to_i,params[:orientacionActual])
+    $tablero.establecerTablero(params[:ancho].to_i,params[:altura].to_i)
+    @posicionX=$automovil.obtenerX()
+    @posicionY=$automovil.obtenerY()
+    @orientacionNueva=$automovil.obtenerOrientacion()
+    
+    erb:simular
 end
-
 
 # post '/avanzar' do
 #     @orientacionNueva=params[:orientacionActual]

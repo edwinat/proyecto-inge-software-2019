@@ -1,6 +1,6 @@
 
   Given("visto la pagina de configuraciones") do
-    visit '/configuracion'  
+    visit '/configuracion', :post
   end
 
   When("deberia haber un campo {string} para llenar un {string}") do |altura, valor|

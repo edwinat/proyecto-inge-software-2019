@@ -1,7 +1,7 @@
 Feature:
         Como Jugador
-        Quiero poder crearme un usuario
-        Para iniciar la simulacion
+        Quiero poder poner mi nombre de perfil
+        Para iniciar la simulacion con mi nombre
 
         Scenario:
         Given visito la pagina principal
@@ -12,4 +12,3 @@ Feature:
         When ingreso el "nombre" del jugador "juan"
         And presiono el boton "aceptar"
         Then deberia haber un mensaje bienvenido jugador "juan"
-        Then deberia haber una "mario2.jpg" por defecto

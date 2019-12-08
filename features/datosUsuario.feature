@@ -3,19 +3,10 @@ Feature:
         Quiero poder crear un tablero por defecto
         Para poder ver un tablero ya definido                                                                                       
 
-        Scenario: Ver el auto dibujado
-        Given visito la pagina principal
-        And presiono el boton "aceptar"
-        Then deberia haber una "mario2.jpg" por defecto
+        Scenario: 
+        Given visto la pagina de configuraciones
+        When deberia haber un campo "altura" para llenar un "dato"
+        And  otro campo "ancho" para llenar otro "dato"
+        Then un boton de "aceptar" para guardar los cambios
 
-
-        Scenario: Ver el auto en la posicion por defecto
-        Given visito la pagina principal
-        And presiono el boton "aceptar"
-        Then quiero ver el auto por defecto en la posicion "0,0"
-
-        Scenario:Ver la orientacion del Auto por defecto
-        Given visito la pagina principal
-        And presiono el boton "aceptar"
-        Then quiero ver la orientacion por defecto al "Este"
         

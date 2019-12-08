@@ -1,5 +1,5 @@
 Given("visito la pagina principal") do
-    visit '/'
+    visit ('/')
 end
   
   Then("deberia haber un mensaje {string}") do |bienvenido|

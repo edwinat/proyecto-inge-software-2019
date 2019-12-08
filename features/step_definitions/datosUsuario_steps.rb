@@ -1,20 +1,16 @@
 
-  # Given("visito la pagina principal") do
-#     visit '/'
-# end
-
-# When("presiono el boton {string}") do |aceptar|
-#     click_button(aceptar)
-#   end
-
-  Then("deberia haber una {string} por defecto") do |image|
-    last_response.should have_xpath("//img[@src=\"#{image}\"]")
+  Given("visto la pagina de configuraciones") do
+    visit '/configuracion'  
   end
 
-  Then("quiero ver el auto por defecto en la posicion {string}") do |posicion|
-    last_response.body.should =~ /#{posicion}/m
+  When("deberia haber un campo {string} para llenar un {string}") do |altura, valor|
+    fill_in(altura, :with => valor)
   end
 
-  Then("quiero ver la orientacion por defecto al {string}") do |orientacion|
-    last_response.body.should =~ /#{orientacion}/m
+  When("otro campo {string} para llenar otro {string}") do |ancho, valor|
+    fill_in(ancho, :with => valor)
+  end
+
+  Then("un boton de {string} para guardar los cambios") do |aceptar|
+    click_button(aceptar)
   end

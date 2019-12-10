@@ -58,7 +58,8 @@
     <input type='number' name='posicionActualX' value="<%= @posicionX %>" hidden>
     <input type='number' name='posicionActualY' value="<%= @posicionY %>" hidden>
     <input type='text' name='orientacionActual' value="<%= @orientacionNueva %>" hidden>
-    <input type="submit" onclick="myFunctionI()" value="arriba">
+    <input type='text' name='movimientos' value="I" hidden>
+    <input type="submit" onclick="myFunctionI()" value="izquierda">
 </form>
 
 <form method='post' action='/derecha'>
@@ -66,7 +67,7 @@
     <input type='number' name='posicionActualX' value="<%= @posicionX %>" hidden>
     <input type='number' name='posicionActualY' value="<%= @posicionY %>" hidden>
     <input type='text' name='orientacionActual' value="<%= @orientacionNueva %>" hidden>
-    <input type="submit" onclick="myFunctionD()" value="abajo">
+    <input type="submit" onclick="myFunctionD()" value="derecha">
 </form>
 
 

@@ -16,6 +16,12 @@ end
 post '/configuracion' do
     @nombre=params[:nombre]
 
+    erb:tamanio
+end
+
+post '/ajustes' do
+    #@nombre=params[:nombre]
+
     erb:ajustes
 end
 
@@ -38,6 +44,16 @@ post '/avanzar' do
 
     erb:simular
 end
+
+post '/izquierda' do
+    $automovil.establecerPosicionOrientacion(params[:posicionActualX].to_i,params[:posicionActualY].to_i,params[:orientacionActual])
+    $automovil.avanzarAvanzado(params[:movimientos].to_s)
+    @posicionX=$automovil.obtenerX()
+    @posicionY=$automovil.obtenerY()
+    @orientacionNueva=$automovil.obtenerOrientacion()
+
+    
+  end
 
 
 #   post '/izquierda' do

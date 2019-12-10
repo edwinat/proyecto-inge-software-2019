@@ -1,25 +1,33 @@
-require 'Auto'
+require './lib/Auto'
 class Tablero
     def initialize
-        @base=8
+        @ancho=8
         @altura=6
-        @auto=Auto.new
+        # @autos=Array.new
+        
+        
     end
-    def obtenerBase()
-        return @base
+    # def agregarNuevoAuto(nuevo)
+    #     @autos.push(nuevo)
+    # end
+    def obtenerAncho()
+        return @ancho
     end
     def obtenerAltura()
         return @altura
     end
-    def establecerTablero(base,altura)
-        @base=base
+    # def establecerAuto(nuevoAuto)
+    #     @auto=nuevoAuto
+    # end
+    def establecerTablero(ancho,altura)
+        @ancho=ancho
         @altura=altura
     end
-    def obtenerAuto()
-        @auto
-    end
+    # def obtenerAuto()
+    #     @auto
+    # end
     def verificarBordes(auto)
-        if(auto.obtenerY()<0 || auto.obtenerY()>@altura || auto.obtenerX()<0 || auto.obtenerX()>@base)
+        if(auto.obtenerY()<0 || auto.obtenerY()>@altura || auto.obtenerX()<0 || auto.obtenerX()>@ancho)
             return false
         end
         

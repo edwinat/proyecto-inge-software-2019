@@ -1,2 +1,69 @@
-<h1> bienvenido jugador <%=@nombre%> </h1>
-<img    src="tablero.jpg">
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Page Title</title>
+
+    <script src="mover.js"></script>
+    <link rel="stylesheet" type="text/css"  href="auto.css" />
+
+</head>
+<body>
+      <h1> bienvenido jugador <%=@nombre%> </h1>
+
+    <div>
+        <label>Posicion:</label><p><%= @posicionX %>,<%= @posicionY %></p>
+    </div>
+    <div>
+        <label>Orientacion:</label><p><%= @orientacionNueva %></p>
+    </div>
+
+   <div class="tablero" >
+        <img id="myDiv" src="mario2.jpg" width="50" height="50" >
+   </div>
+
+<form method='post' action='/avanzar'>
+    <%# <button type="button" onclick="myFunctionA()">adelante</button> %>
+    <input type='number' name='posicionActualX' value="<%= @posicionX %>" hidden>
+    <input type='number' name='posicionActualY' value="<%= @posicionY %>" hidden>
+    <input type='text' name='orientacionActual' value="<%= @orientacionNueva %>" hidden>
+    <input type="submit" onclick="myFunctionA()" value="adelante">
+</form>
+
+<form method='post' action='/izquierda'>
+    <%# <button type="button" onclick="myFunctionI()">arriba</button> %>
+    <input type='number' name='posicionActualX' value="<%= @posicionX %>" hidden>
+    <input type='number' name='posicionActualY' value="<%= @posicionY %>" hidden>
+    <input type='text' name='orientacionActual' value="<%= @orientacionNueva %>" hidden>
+    <input type="submit" onclick="myFunctionI()" value="arriba">
+</form>
+
+<form method='post' action='/derecha'>
+    <%# <button type="button" onclick="myFunctionD()">abajo</button> %>
+    <input type='number' name='posicionActualX' value="<%= @posicionX %>" hidden>
+    <input type='number' name='posicionActualY' value="<%= @posicionY %>" hidden>
+    <input type='text' name='orientacionActual' value="<%= @orientacionNueva %>" hidden>
+    <input type="submit" onclick="myFunctionD()" value="abajo">
+</form>
+
+
+    <p id="m" hidden>Holaa</p>
+    
+    <script>
+    function obtenerDatos() {
+        let datosX="<%= @posicionX %>";
+        console.log(datosX);
+        let datosY="<%= @posicionY %>";
+        console.log(datosY);
+
+        let a=document.getElementById("m").textContent;
+        console.log(a);
+  
+        enviardatos({datosX,datosY});
+    }
+
+    obtenerDatos();
+    </script>
+
+</body>
+</html>

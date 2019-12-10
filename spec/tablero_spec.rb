@@ -72,6 +72,15 @@ RSpec.describe Tablero do
       
 
     end
+    it 'verificar si el auto esta fuera del si el tablero es altura=5 ancho=6 y el auto este en la posicion x=1, y=2 y orientacion=Norte se halla movido="IAIAIAIAA" que este dentro el tablero salga true' do        
+        @tablero.establecerTablero(5,5)
+        @auto.establecerPosicionOrientacion(1,2,"Norte")
+        @auto.avanzarAvanzado("IAIAIAIAA")
+
+        expect(@tablero.verificarBordes(@auto)).to eq(true)
+      
+
+    end
     
       it 'al establecer Ancho 5 y altura 5 del tablero ' do
         

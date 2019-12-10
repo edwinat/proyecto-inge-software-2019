@@ -72,10 +72,10 @@ class Auto
             avanzarAdelante()
         when 'I'
             girarIzquierda()
-            avanzarAdelante()
+            #avanzarAdelante()
         when 'D'
             girarDerecha()
-            avanzarAdelante()
+            #avanzarAdelante()
         
         end
     end

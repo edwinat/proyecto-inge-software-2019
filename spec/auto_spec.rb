@@ -107,19 +107,19 @@ RSpec.describe Auto do
         expect(@auto.obtenerOrientacion).to eq("Este")
         
     end
-    it ' si ponemos "I" endria que esta "x=1" ,"y=2" y "Orientacion=Norte"' do
+    it ' si ponemos "I" endria que esta "x=1" ,"y=1" y "Orientacion=Norte"' do
         @auto.establecerPosicionOrientacion(1,1,"Este")
         @auto.avanzarSimple("I")
         expect(@auto.obtenerX).to eq(1)
-        expect(@auto.obtenerY).to eq(2)
+        expect(@auto.obtenerY).to eq(1)
         expect(@auto.obtenerOrientacion).to eq("Norte")
         
     end
-    it ' si ponemos "D" endria que esta "x=1" ,"y=0" y "Orientacion=Sur"' do
+    it ' si ponemos "D" endria que esta "x=1" ,"y=1" y "Orientacion=Sur"' do
         @auto.establecerPosicionOrientacion(1,1,"Este")
         @auto.avanzarSimple("D")
         expect(@auto.obtenerX).to eq(1)
-        expect(@auto.obtenerY).to eq(0)
+        expect(@auto.obtenerY).to eq(1)
         expect(@auto.obtenerOrientacion).to eq("Sur")
         
     end
@@ -131,20 +131,28 @@ RSpec.describe Auto do
         expect(@auto.obtenerOrientacion).to eq("Este")
         
     end
-    it ' si ponemos "AI" endria que esta "x=2" ,"y=2" y "Orientacion=Norte"' do
+    it ' si ponemos "AI" endria que esta "x=2" ,"y=1" y "Orientacion=Norte"' do
         @auto.establecerPosicionOrientacion(1,1,"Este")
         @auto.avanzarAvanzado("AI")
         expect(@auto.obtenerX).to eq(2)
-        expect(@auto.obtenerY).to eq(2)
+        expect(@auto.obtenerY).to eq(1)
         expect(@auto.obtenerOrientacion).to eq("Norte")
         
     end
-    it ' si ponemos "AID" endria que esta "x=3" ,"y=2" y "Orientacion=Este"' do
+    it ' si ponemos "AID" endria que esta "x=2" ,"y=1" y "Orientacion=Este"' do
         @auto.establecerPosicionOrientacion(1,1,"Este")
         @auto.avanzarAvanzado("AID")
-        expect(@auto.obtenerX).to eq(3)
-        expect(@auto.obtenerY).to eq(2)
+        expect(@auto.obtenerX).to eq(2)
+        expect(@auto.obtenerY).to eq(1)
         expect(@auto.obtenerOrientacion).to eq("Este")
+        
+    end
+    it ' si ponemos "IAIAIAIAA" endria que esta "x=1" ,"y=3" y "Orientacion=Norte"' do
+        @auto.establecerPosicionOrientacion(1,2,"Norte")
+        @auto.avanzarAvanzado("IAIAIAIAA")
+        expect(@auto.obtenerX).to eq(1)
+        expect(@auto.obtenerY).to eq(3)
+        expect(@auto.obtenerOrientacion).to eq("Norte")
         
     end
 

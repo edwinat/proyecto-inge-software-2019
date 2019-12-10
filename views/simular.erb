@@ -7,6 +7,11 @@
     <script src="mover.js"></script>
     <link rel="stylesheet" type="text/css"  href="auto.css" />
 
+    <style>
+    th, td {
+    border: 1px solid black;
+    s}
+</style>
 </head>
 <body>
       <h1> Simulacion en ejecucion</h1>
@@ -18,6 +23,23 @@
         <label>orientacion: </label><p><%= @orientacionNueva %></p>
     </div>
 
+    <h3>Posicion:</h3>
+    <table >
+        <tr>
+            <th>Autos </th>
+            <th>x: </th>
+            <th>y: </th>
+            <th>orientacion: </th>
+        </tr>
+        <tr>
+            <td>Auto 1</td>
+            <td id="x"> <%= @posicionX %></td>
+            <td id="y"> <%= @posicionY %></td>
+            <td id="orientacion"> <%= @orientacionNueva %></td>
+        </tr>
+    </table>
+
+
    <div class="tablero" >
         <img id="myDiv" src="mario2.jpg" width="50" height="50" >
    </div>
@@ -27,6 +49,7 @@
     <input type='number' name='posicionActualX' value="<%= @posicionX %>" hidden>
     <input type='number' name='posicionActualY' value="<%= @posicionY %>" hidden>
     <input type='text' name='orientacionActual' value="<%= @orientacionNueva %>" hidden>
+    <input type='text' name='movimientos' value="A" hidden>
     <input type="submit" onclick="myFunctionA()" value="adelante">
 </form>
 

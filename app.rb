@@ -25,18 +25,20 @@ post '/simulacion' do
     @posicionX=$automovil.obtenerX()
     @posicionY=$automovil.obtenerY()
     @orientacionNueva=$automovil.obtenerOrientacion()
-    
+
     erb:simular
 end
 
-# post '/avanzar' do
-#     @orientacionNueva=params[:orientacionActual]
-#     $automovil.establecerPosicionOrientacion(params[:posicionActualX].to_i,params[:posicionActualY].to_i,params[:orientacionActual])
-#     $automovil.avanzarAvanzado("A")
-#     @posicionX=$automovil.obtenerX()
-#     @posicionY=$automovil.obtenerY()
-#     erb:simular
-# end
+post '/avanzar' do
+    $automovil.establecerPosicionOrientacion(params[:posicionActualX].to_i,params[:posicionActualY].to_i,params[:orientacionActual])
+    $automovil.avanzarAvanzado(params[:movimientos].to_s)
+    @posicionX=$automovil.obtenerX()
+    @posicionY=$automovil.obtenerY()
+    @orientacionNueva=$automovil.obtenerOrientacion()
+
+    erb:simular
+end
+
 
 #   post '/izquierda' do
 #     @orientacionNueva=params[:orientacionActual]

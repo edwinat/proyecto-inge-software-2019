@@ -1,5 +1,5 @@
 Given("visito la pagina principal") do
-    visit '/'
+    visit ('/')
 end
   
   Then("deberia haber un mensaje {string}") do |bienvenido|
@@ -13,7 +13,7 @@ end
   When("presiono el boton {string}") do |aceptar|
     click_button(aceptar)
   end
-  Then("deberia haber un mensaje bienvenido jugador {string}") do |nombre|
-    last_response.body.should =~ /#{nombre}/m
+
+  Then("deberia haber un mensaje de {string}") do |nombre|
+    last_response.body.should =~ /#{nombre}/m  
   end
-  

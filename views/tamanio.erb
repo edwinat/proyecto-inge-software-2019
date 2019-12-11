@@ -9,10 +9,20 @@
 
 </head>
     <body>
-      <h1> tamaño de tablero </h1>
-      <form method='post' action='/tamaño'>
+
+      <h1> bienvenido jugador <%=@nombre%> </h1>
+      <h2> tamaño de tablero </h2>
+      <form method='post' action='/ajustes'>
            ingresar altura:<input type='text' name='altura'>
            ingresar ancho:<input type='text' name='ancho'>
+           ingresar cantidad de jugadores:<input type='text' name='cantidadAutos'>
+           <%# <select name="cantidadAutos">
+              <option value="1" selected>1</option> 
+              <option value="2" >2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+          </select> %>
            <input type="submit" value="comenzar">
       </form>
     </body>

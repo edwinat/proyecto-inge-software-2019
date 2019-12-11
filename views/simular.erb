@@ -14,8 +14,10 @@
 </style>
 </head>
 <body>
-      <h1> Simulacion en ejecucion</h1>
+    <h1> Simulacion en ejecucion</h1>
 
+
+    <h3>altura: <%=@altura%>, ancho: <%=@ancho%></h3>
     <h3>Posicion:</h3>
 
     <form method='post' action='/ejecutar'>
@@ -27,7 +29,7 @@
             <th>orientacion:</th>
             <th>Ingresar movimientos:</th>
         </tr>
-        <% if @cantidadAutosParametro >= 1 %>
+        <<% if @cantidadAutosParametro >= 1 %>
             <tr>
                 <td id="nombre1"><%= @nombre1 %></td>
                 <td id="x1"> <%= @posicionX1 %></td>

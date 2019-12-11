@@ -66,6 +66,8 @@ post '/simulacion' do
     @posicionY5=$automovil5.obtenerY()
     @orientacionNueva5=$automovil5.obtenerOrientacion()
     @cantidadAutosParametro=$cantidadAutos
+    @altura=$tablero.obtenerAltura()
+    @ancho=$tablero.obtenerAncho()
 
     erb:simular
 end
@@ -104,6 +106,8 @@ post '/ejecutar' do
     @orientacionNueva5=$automovil5.obtenerOrientacion()
 
     @cantidadAutosParametro=$cantidadAutos
+    @altura=$tablero.obtenerAltura()
+    @ancho=$tablero.obtenerAncho()
 
     erb:simular
 end

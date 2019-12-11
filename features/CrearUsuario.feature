@@ -11,4 +11,4 @@ Feature:
         Given visito la pagina principal
         When ingreso el "nombre" del jugador "juan"
         And presiono el boton "aceptar"
-        Then deberia haber un mensaje bienvenido jugador "juan"
+        Then deberia haber un mensaje de "bienvenido jugador juan"

@@ -1,5 +1,5 @@
 
-  Given("visto la pagina de configuraciones") do
+  Given("visito la vista de tamaño") do
     visit '/configuracion', :post
   end
 
@@ -13,4 +13,12 @@
 
   Then("un boton de {string} para guardar los cambios") do |aceptar|
     click_button(aceptar)
+  end
+
+  Then("dirigir a la vista simulacion") do
+    visit '/simulacion', :post
+  end
+  
+  Then("mostrar la vista con {string}") do |dimenciones|
+    last_response.body.should =~ /#{dimenciones}/m  
   end

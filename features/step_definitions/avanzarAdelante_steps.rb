@@ -12,7 +12,9 @@ Given("visito la pagina donde esta la simulacion con x={int}, y={int}, orientaci
 
   Then("la posicion x deberia ser: {string}") do |dato|
 
-    last_response.should have_xpath( "//td[@id=\"x\"]") 
+    last_response.should have_xpath( "//td[@id=\"x\"]") do 
+      last_response.body.should =~ /#{dato}/m
+    end
   end
   
   Then("la posicion y deberia ser: {string}") do |dato|

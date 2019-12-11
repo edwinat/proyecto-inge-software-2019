@@ -3,7 +3,7 @@ require './lib/Tablero'
 require './lib/Auto'
 
 #Inizialisamos el tablero con el auto
-$tablero=Tablero.new
+$TABLERO=Tablero.new
 $automovil1=Auto.new
 $automovil2=Auto.new
 $automovil3=Auto.new
@@ -22,7 +22,7 @@ post '/configuracion' do
 end
 
 post '/ajustes' do
-    $tablero.establecerTablero(params[:ancho],params[:altura])
+    $TABLERO.establecerTablero(params[:ancho],params[:altura])
     $cantidadAutos=params[:cantidadAutos].to_i
     @cantidadAutosParametro=$cantidadAutos
 
@@ -41,6 +41,15 @@ post '/simulacion' do
     $automovil4.establecerNombre(params[:nombre4])
     $automovil5.establecerNombre(params[:nombre5])
 
+    # auto=Auto.new
+    #$TABLERO.establecerTablero($TABLERO.obtenerAncho(),$TABLERO.obtenerAltura())
+
+    #@estaDentroTablero1=$TABLERO.verificarBordes($automovil1)
+    # @estaDentroTablero2=$tablero.verificarBordes($automovil2)
+    # @estaDentroTablero3=$tablero.verificarBordes($automovil3)
+    # @estaDentroTablero4=$tablero.verificarBordes($automovil4)
+    # @estaDentroTablero5=$tablero.verificarBordes($automovil5)
+
     @nombre1=$automovil1.obtenerNombre()
     @posicionX1=$automovil1.obtenerX()
     @posicionY1=$automovil1.obtenerY()
@@ -65,9 +74,10 @@ post '/simulacion' do
     @posicionX5=$automovil5.obtenerX()
     @posicionY5=$automovil5.obtenerY()
     @orientacionNueva5=$automovil5.obtenerOrientacion()
+
     @cantidadAutosParametro=$cantidadAutos
-    @altura=$tablero.obtenerAltura()
-    @ancho=$tablero.obtenerAncho()
+    @altura=$TABLERO.obtenerAltura()
+    @ancho=$TABLERO.obtenerAncho()
 
     erb:simular
 end
@@ -79,6 +89,11 @@ post '/ejecutar' do
     $automovil3.avanzarAvanzado(params[:movimientos3].to_s)
     $automovil4.avanzarAvanzado(params[:movimientos4].to_s)
     $automovil5.avanzarAvanzado(params[:movimientos5].to_s)
+    # @estaDentroTablero1=$tablero.verificarBordes($automovil1)
+    # @estaDentroTablero2=$tablero.verificarBordes($automovil2)
+    # @estaDentroTablero3=$tablero.verificarBordes($automovil3)
+    # @estaDentroTablero4=$tablero.verificarBordes($automovil4)
+    # @estaDentroTablero5=$tablero.verificarBordes($automovil5)
 
     @nombre1=$automovil1.obtenerNombre()
     @posicionX1=$automovil1.obtenerX()
@@ -106,8 +121,8 @@ post '/ejecutar' do
     @orientacionNueva5=$automovil5.obtenerOrientacion()
 
     @cantidadAutosParametro=$cantidadAutos
-    @altura=$tablero.obtenerAltura()
-    @ancho=$tablero.obtenerAncho()
+    @altura=$TABLERO.obtenerAltura()
+    @ancho=$TABLERO.obtenerAncho()
 
     erb:simular
 end

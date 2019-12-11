@@ -27,14 +27,16 @@
             <th>posicion x</th>
             <th>posicion y</th>
             <th>orientacion:</th>
+            <th>¿Esta dentro el tablero?</th>
             <th>Ingresar movimientos:</th>
         </tr>
-        <<% if @cantidadAutosParametro >= 1 %>
+        <% if @cantidadAutosParametro >= 1 %>
             <tr>
                 <td id="nombre1"><%= @nombre1 %></td>
                 <td id="x1"> <%= @posicionX1 %></td>
                 <td id="y1"> <%= @posicionY1 %></td>
                 <td id="orientacion1"> <%= @orientacionNueva1 %></td>
+                <td id="estado1"> <%#<%= @estaDentroTablero1%></td> 
                 <td><input type='text' name='movimientos1'></td>
             </tr>
         <% end %>
@@ -45,6 +47,7 @@
             <td id="x2"> <%= @posicionX2 %></td>
             <td id="y2"> <%= @posicionY2 %></td>
             <td id="orientacion2"> <%= @orientacionNueva2 %></td>
+            <td id="estado2"><%# <%= @estaDentroTablero2 %></td>
             <td><input type='text' name='movimientos2'></td>
         </tr>
         <% end %>
@@ -55,6 +58,7 @@
             <td id="x3"> <%= @posicionX3 %></td>
             <td id="y3"> <%= @posicionY3 %></td>
             <td id="orientacion3"> <%= @orientacionNueva3 %></td>
+            <td id="estado3"><%# <%= @estaDentroTablero3 %></td>
             <td><input type='text' name='movimientos3'></td>
         </tr>
         <% end %>
@@ -65,6 +69,7 @@
             <td id="x4"> <%= @posicionX4 %></td>
             <td id="y4"> <%= @posicionY4 %></td>
             <td id="orientacion4"> <%= @orientacionNueva4 %></td>
+            <td id="estado4"> <%#<%= @estaDentroTablero4 %></td>
             <td><input type='text' name='movimientos4'></td>
         </tr>
         <% end %>
@@ -75,9 +80,10 @@
             <td id="x5"> <%= @posicionX5 %></td>
             <td id="y5"> <%= @posicionY5 %></td>
             <td id="orientacion5"> <%= @orientacionNueva5 %></td>
+            <td id="estado5"> <%#<%= @estaDentroTablero5 %></td>
             <td><input type='text' name='movimientos5'></td>
         </tr>
-        <% end %>>
+        <% end %>
     </table>
     
     

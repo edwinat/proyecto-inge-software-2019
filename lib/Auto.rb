@@ -72,10 +72,8 @@ class Auto
             avanzarAdelante()
         when 'I'
             girarIzquierda()
-            #avanzarAdelante()
         when 'D'
             girarDerecha()
-            #avanzarAdelante()
         
         end
     end

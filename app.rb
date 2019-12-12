@@ -22,7 +22,7 @@ post '/configuracion' do
 end
 
 post '/ajustes' do
-    $TABLERO.establecerTablero(params[:ancho],params[:altura])
+    $TABLERO.establecerTablero(params[:ancho].to_i,params[:altura].to_i)
     $cantidadAutos=params[:cantidadAutos].to_i
     @cantidadAutosParametro=$cantidadAutos
 
@@ -30,25 +30,23 @@ post '/ajustes' do
 end
 
 post '/simulacion' do
-    $automovil1.establecerPosicionOrientacion(params[:posicionActualX1].to_i,params[:posicionActualY1].to_i,params[:orientacionActual1])
-    $automovil2.establecerPosicionOrientacion(params[:posicionActualX2].to_i,params[:posicionActualY2].to_i,params[:orientacionActual2])
-    $automovil3.establecerPosicionOrientacion(params[:posicionActualX3].to_i,params[:posicionActualY3].to_i,params[:orientacionActual3])
-    $automovil4.establecerPosicionOrientacion(params[:posicionActualX4].to_i,params[:posicionActualY4].to_i,params[:orientacionActual4])
-    $automovil5.establecerPosicionOrientacion(params[:posicionActualX5].to_i,params[:posicionActualY5].to_i,params[:orientacionActual5])
+    $automovil1.establecerPosicionOrientacion(params[:posicionActualX1].to_i,params[:posicionActualY1].to_i,params[:orientacionNueva1])
+    $automovil2.establecerPosicionOrientacion(params[:posicionActualX2].to_i,params[:posicionActualY2].to_i,params[:orientacionNueva2])
+    $automovil3.establecerPosicionOrientacion(params[:posicionActualX3].to_i,params[:posicionActualY3].to_i,params[:orientacionNueva3])
+    $automovil4.establecerPosicionOrientacion(params[:posicionActualX4].to_i,params[:posicionActualY4].to_i,params[:orientacionNueva4])
+    $automovil5.establecerPosicionOrientacion(params[:posicionActualX5].to_i,params[:posicionActualY5].to_i,params[:orientacionNueva5])
     $automovil1.establecerNombre(params[:nombre1])
     $automovil2.establecerNombre(params[:nombre2])
     $automovil3.establecerNombre(params[:nombre3])
     $automovil4.establecerNombre(params[:nombre4])
     $automovil5.establecerNombre(params[:nombre5])
 
-    # auto=Auto.new
-    #$TABLERO.establecerTablero($TABLERO.obtenerAncho(),$TABLERO.obtenerAltura())
 
-    #@estaDentroTablero1=$TABLERO.verificarBordes($automovil1)
-    # @estaDentroTablero2=$tablero.verificarBordes($automovil2)
-    # @estaDentroTablero3=$tablero.verificarBordes($automovil3)
-    # @estaDentroTablero4=$tablero.verificarBordes($automovil4)
-    # @estaDentroTablero5=$tablero.verificarBordes($automovil5)
+    @estaDentroTablero1=$TABLERO.verificarBordes($automovil1)
+    @estaDentroTablero2=$TABLERO.verificarBordes($automovil2)
+    @estaDentroTablero3=$TABLERO.verificarBordes($automovil3)
+    @estaDentroTablero4=$TABLERO.verificarBordes($automovil4)
+    @estaDentroTablero5=$TABLERO.verificarBordes($automovil5)
 
     @nombre1=$automovil1.obtenerNombre()
     @posicionX1=$automovil1.obtenerX()
@@ -89,11 +87,12 @@ post '/ejecutar' do
     $automovil3.avanzarAvanzado(params[:movimientos3].to_s)
     $automovil4.avanzarAvanzado(params[:movimientos4].to_s)
     $automovil5.avanzarAvanzado(params[:movimientos5].to_s)
-    # @estaDentroTablero1=$tablero.verificarBordes($automovil1)
-    # @estaDentroTablero2=$tablero.verificarBordes($automovil2)
-    # @estaDentroTablero3=$tablero.verificarBordes($automovil3)
-    # @estaDentroTablero4=$tablero.verificarBordes($automovil4)
-    # @estaDentroTablero5=$tablero.verificarBordes($automovil5)
+
+    @estaDentroTablero1=$TABLERO.verificarBordes($automovil1)
+    @estaDentroTablero2=$TABLERO.verificarBordes($automovil2)
+    @estaDentroTablero3=$TABLERO.verificarBordes($automovil3)
+    @estaDentroTablero4=$TABLERO.verificarBordes($automovil4)
+    @estaDentroTablero5=$TABLERO.verificarBordes($automovil5)
 
     @nombre1=$automovil1.obtenerNombre()
     @posicionX1=$automovil1.obtenerX()

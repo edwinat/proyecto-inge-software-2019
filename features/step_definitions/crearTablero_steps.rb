@@ -15,6 +15,7 @@
     click_button(aceptar)
   end
 
+
   Then("dirigir a la vista simulacion") do
     visit '/simulacion', :post
   end

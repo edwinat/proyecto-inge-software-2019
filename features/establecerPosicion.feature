@@ -1,18 +1,22 @@
 Feature:
         Como Jugador
-        Quiero poder establecer la posicion de un auto
-        Para empezar desde una posicion particular                                                                                     
+        Quiero poder establecer los parametros iniciales
+        Para saber el punto inicial(x,y), orientacion y nombre                                                                                     
 
-        Scenario: 
-        Given visito la pagina de ajustes
+        Scenario: con 1 auto
+        Given visito la pagina de ajustes con parametro "cantidadAutos=1"
         When deberia existir un campo para "posicionActualX1" para llenar con "0"
-        And  otro campo para "posicionActualY1" para llenar con "0"
-        And un campo para la "orientacionActual1" con "Este"
+        Then deberia existir un campo para "posicionActualY1" para llenar con "0"
+        And deberia existir un campo para "orientacionNueva1" para llenar con "Este"
+        Then deberia existir un campo para "nombre1" para llenar con "auto 1"
         Then un boton de "aceptar" para guardar el cambio
 
-        Scenario: 
-        Given despues de guardar, se visita la pagina de simular
-        Then se tiene una tabla con id "x1": "0"
-        And se tiene una tabla con id "y1": "0"
-        Then se tiene una tabla con id "orientacion1": "E"
+
+        Scenario: con 2 auto
+        Given visito la pagina de ajustes con parametro "cantidadAutos=2"
+        When deberia existir un campo para "posicionActualX2" para llenar con "0"
+        Then deberia existir un campo para "posicionActualY2" para llenar con "0"
+        And deberia existir un campo para "orientacionNueva2" para llenar con "Este"
+        Then deberia existir un campo para "nombre2" para llenar con "auto 1"
+        Then un boton de "aceptar" para guardar el cambio
         

@@ -20,6 +20,8 @@
     <h3>altura: <%=@altura%>, ancho: <%=@ancho%></h3>
     <h3>Posicion:</h3>
 
+    <td>Nombre1: <%= @nombre1 %></td>   
+    <td>orientacion1: <%= @orientacionNueva1 %></td>  
     <form method='post' action='/ejecutar'>
     <table >
         <tr>
@@ -32,11 +34,11 @@
         </tr>
         <% if @cantidadAutosParametro >= 1 %>
             <tr>
-                <td id="nombre1"><%= @nombre1 %></td>
-                <td id="x1"> <%= @posicionX1 %></td>
-                <td id="y1"> <%= @posicionY1 %></td>
-                <td id="orientacion1"> <%= @orientacionNueva1 %></td>
-                <td id="estado1"> <%#<%= @estaDentroTablero1%></td> 
+                <td id="nombre1">Nombre1: <%= @nombre1 %></td>
+                <td id="x1">X1: <%= @posicionX1 %></td>
+                <td id="y1">Y1: <%= @posicionY1 %></td>
+                <td id="orientacion1">orientacion1: <%= @orientacionNueva1 %></td>
+                <td id="estado1">estaFuera1: <%= @estaDentroTablero1%></td> 
                 <td><input type='text' name='movimientos1'></td>
             </tr>
         <% end %>
@@ -47,7 +49,7 @@
             <td id="x2"> <%= @posicionX2 %></td>
             <td id="y2"> <%= @posicionY2 %></td>
             <td id="orientacion2"> <%= @orientacionNueva2 %></td>
-            <td id="estado2"><%# <%= @estaDentroTablero2 %></td>
+            <td id="estado2"> <%= @estaDentroTablero2 %></td>
             <td><input type='text' name='movimientos2'></td>
         </tr>
         <% end %>
@@ -58,7 +60,7 @@
             <td id="x3"> <%= @posicionX3 %></td>
             <td id="y3"> <%= @posicionY3 %></td>
             <td id="orientacion3"> <%= @orientacionNueva3 %></td>
-            <td id="estado3"><%# <%= @estaDentroTablero3 %></td>
+            <td id="estado3"> <%= @estaDentroTablero3 %></td>
             <td><input type='text' name='movimientos3'></td>
         </tr>
         <% end %>
@@ -69,7 +71,7 @@
             <td id="x4"> <%= @posicionX4 %></td>
             <td id="y4"> <%= @posicionY4 %></td>
             <td id="orientacion4"> <%= @orientacionNueva4 %></td>
-            <td id="estado4"> <%#<%= @estaDentroTablero4 %></td>
+            <td id="estado4"> <%= @estaDentroTablero4 %></td>
             <td><input type='text' name='movimientos4'></td>
         </tr>
         <% end %>
@@ -80,7 +82,7 @@
             <td id="x5"> <%= @posicionX5 %></td>
             <td id="y5"> <%= @posicionY5 %></td>
             <td id="orientacion5"> <%= @orientacionNueva5 %></td>
-            <td id="estado5"> <%#<%= @estaDentroTablero5 %></td>
+            <td id="estado5"> <%= @estaDentroTablero5 %></td>
             <td><input type='text' name='movimientos5'></td>
         </tr>
         <% end %>

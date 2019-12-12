@@ -18,20 +18,11 @@
 
 
     <h3>altura: <%=@altura%>, ancho: <%=@ancho%></h3>
+
     <h3>Posicion:</h3>
 
-    <td>Nombre1: <%= @nombre1 %></td>   
-    <td>orientacion1: <%= @orientacionNueva1 %></td>  
     <form method='post' action='/ejecutar'>
     <table >
-        <tr>
-            <th>Autos</th>
-            <th>posicion x</th>
-            <th>posicion y</th>
-            <th>orientacion:</th>
-            <th>¿Esta dentro el tablero?</th>
-            <th>Ingresar movimientos:</th>
-        </tr>
         <% if @cantidadAutosParametro >= 1 %>
             <tr>
                 <td id="nombre1">Nombre1: <%= @nombre1 %></td>
@@ -45,44 +36,44 @@
 
         <% if @cantidadAutosParametro >= 2 %>
         <tr>
-            <td id="nombre2"><%= @nombre2 %></td>
-            <td id="x2"> <%= @posicionX2 %></td>
-            <td id="y2"> <%= @posicionY2 %></td>
-            <td id="orientacion2"> <%= @orientacionNueva2 %></td>
-            <td id="estado2"> <%= @estaDentroTablero2 %></td>
+            <td id="nombre2">Nombre2: <%= @nombre2 %></td>
+            <td id="x2">X2: <%= @posicionX2 %></td>
+            <td id="y2">Y2: <%= @posicionY2 %></td>
+            <td id="orientacion2">orientacion2: <%= @orientacionNueva2 %></td>
+            <td id="estado2">estaFuera2: <%= @estaDentroTablero2 %></td>
             <td><input type='text' name='movimientos2'></td>
         </tr>
         <% end %>
 
         <% if @cantidadAutosParametro >= 3 %>
         <tr>
-            <td id="nombre3"><%= @nombre3 %></td>
-            <td id="x3"> <%= @posicionX3 %></td>
-            <td id="y3"> <%= @posicionY3 %></td>
-            <td id="orientacion3"> <%= @orientacionNueva3 %></td>
-            <td id="estado3"> <%= @estaDentroTablero3 %></td>
+            <td id="nombre3">Nombre3: <%= @nombre3 %></td>
+            <td id="x3">X3: <%= @posicionX3 %></td>
+            <td id="y3">Y3: <%= @posicionY3 %></td>
+            <td id="orientacion3">orientacion3: <%= @orientacionNueva3 %></td>
+            <td id="estado3">estaFuera3: <%= @estaDentroTablero3 %></td>
             <td><input type='text' name='movimientos3'></td>
         </tr>
         <% end %>
 
         <% if @cantidadAutosParametro >= 4 %>
         <tr>
-            <td id="nombre4"><%= @nombre4 %></td>
-            <td id="x4"> <%= @posicionX4 %></td>
-            <td id="y4"> <%= @posicionY4 %></td>
-            <td id="orientacion4"> <%= @orientacionNueva4 %></td>
-            <td id="estado4"> <%= @estaDentroTablero4 %></td>
+            <td id="nombre4">Nombre4: <%= @nombre4 %></td>
+            <td id="x4">X4: <%= @posicionX4 %></td>
+            <td id="y4">Y4: <%= @posicionY4 %></td>
+            <td id="orientacion4">orientacion4: <%= @orientacionNueva4 %></td>
+            <td id="estado4">estaFuera4: <%= @estaDentroTablero4 %></td>
             <td><input type='text' name='movimientos4'></td>
         </tr>
         <% end %>
 
         <% if @cantidadAutosParametro >= 5 %>
         <tr>
-            <td id="nombre5"><%= @nombre5 %></td>
-            <td id="x5"> <%= @posicionX5 %></td>
-            <td id="y5"> <%= @posicionY5 %></td>
-            <td id="orientacion5"> <%= @orientacionNueva5 %></td>
-            <td id="estado5"> <%= @estaDentroTablero5 %></td>
+            <td id="nombre5">Nombre5: <%= @nombre5 %></td>
+            <td id="x5">X5: <%= @posicionX5 %></td>
+            <td id="y5">Y5: <%= @posicionY5 %></td>
+            <td id="orientacion5">orientacion5: <%= @orientacionNueva5 %></td>
+            <td id="estado5">estaFuera5: <%= @estaDentroTablero5 %></td>
             <td><input type='text' name='movimientos5'></td>
         </tr>
         <% end %>

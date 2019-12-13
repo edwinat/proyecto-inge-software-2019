@@ -1,7 +1,7 @@
 Feature:
         Como Jugador
-        Quiero poder crear un tablero
-        Para poder ver saber los limites                                                                                       
+        Quiero poder definir las dimensiones del tablero
+        Para poder saber su altura y ancho                                                                                      
 
         Scenario: 
         Given visito la vista de tamaño

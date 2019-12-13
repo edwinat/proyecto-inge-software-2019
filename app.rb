@@ -82,6 +82,12 @@ end
 
 post '/ejecutar' do
   
+    $automovil1.establecerPosicionOrientacion(params[:posicionActualX1].to_i,params[:posicionActualY1].to_i,params[:orientacionNueva1])
+    $automovil2.establecerPosicionOrientacion(params[:posicionActualX2].to_i,params[:posicionActualY2].to_i,params[:orientacionNueva2])
+    $automovil3.establecerPosicionOrientacion(params[:posicionActualX3].to_i,params[:posicionActualY3].to_i,params[:orientacionNueva3])
+    $automovil4.establecerPosicionOrientacion(params[:posicionActualX4].to_i,params[:posicionActualY4].to_i,params[:orientacionNueva4])
+    $automovil5.establecerPosicionOrientacion(params[:posicionActualX5].to_i,params[:posicionActualY5].to_i,params[:orientacionNueva5])
+    
     $automovil1.avanzarAvanzado(params[:movimientos1].to_s)
     $automovil2.avanzarAvanzado(params[:movimientos2].to_s)
     $automovil3.avanzarAvanzado(params[:movimientos3].to_s)

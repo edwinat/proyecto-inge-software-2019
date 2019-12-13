@@ -29,7 +29,11 @@
                 <td id="x1">X1: <%= @posicionX1 %></td>
                 <td id="y1">Y1: <%= @posicionY1 %></td>
                 <td id="orientacion1">orientacion1: <%= @orientacionNueva1 %></td>
-                <td id="estado1">estaFuera1: <%= @estaDentroTablero1%></td> 
+                <td id="estado1">estaFuera1: <%= @estaDentroTablero1%></td>
+
+                <input type='text' name='posicionActualX1' value="<%= @posicionX1 %>" hidden>
+                <input type='text' name='posicionActualY1'value="<%= @posicionY1 %>" hidden>
+                <input type='text' name='orientacionNueva1'value="<%= @orientacionNueva1 %>" hidden> 
                 <td><input type='text' name='movimientos1'></td>
             </tr>
         <% end %>
@@ -41,6 +45,10 @@
             <td id="y2">Y2: <%= @posicionY2 %></td>
             <td id="orientacion2">orientacion2: <%= @orientacionNueva2 %></td>
             <td id="estado2">estaFuera2: <%= @estaDentroTablero2 %></td>
+
+            <input type='text' name='posicionActualX2' value="<%= @posicionX2 %>" hidden>
+            <input type='text' name='posicionActualY2'value="<%= @posicionY2 %>" hidden>
+            <input type='text' name='orientacionNueva2'value="<%= @orientacionNueva2 %>" hidden>
             <td><input type='text' name='movimientos2'></td>
         </tr>
         <% end %>
@@ -52,6 +60,10 @@
             <td id="y3">Y3: <%= @posicionY3 %></td>
             <td id="orientacion3">orientacion3: <%= @orientacionNueva3 %></td>
             <td id="estado3">estaFuera3: <%= @estaDentroTablero3 %></td>
+
+            <input type='text' name='posicionActualX3' value="<%= @posicionX3 %>" hidden>
+            <input type='text' name='posicionActualY3'value="<%= @posicionY3 %>" hidden>
+            <input type='text' name='orientacionNueva3'value="<%= @orientacionNueva3 %>" hidden>
             <td><input type='text' name='movimientos3'></td>
         </tr>
         <% end %>
@@ -63,6 +75,10 @@
             <td id="y4">Y4: <%= @posicionY4 %></td>
             <td id="orientacion4">orientacion4: <%= @orientacionNueva4 %></td>
             <td id="estado4">estaFuera4: <%= @estaDentroTablero4 %></td>
+
+            <input type='text' name='posicionActualX4' value="<%= @posicionX4 %>" hidden>
+            <input type='text' name='posicionActualY4'value="<%= @posicionY4 %>" hidden>
+            <input type='text' name='orientacionNueva4'value="<%= @orientacionNueva4 %>" hidden>
             <td><input type='text' name='movimientos4'></td>
         </tr>
         <% end %>
@@ -74,6 +90,10 @@
             <td id="y5">Y5: <%= @posicionY5 %></td>
             <td id="orientacion5">orientacion5: <%= @orientacionNueva5 %></td>
             <td id="estado5">estaFuera5: <%= @estaDentroTablero5 %></td>
+
+            <input type='text' name='posicionActualX5' value="<%= @posicionX5 %>" hidden>
+            <input type='text' name='posicionActualY5'value="<%= @posicionY5 %>" hidden>
+            <input type='text' name='orientacionNueva5'value="<%= @orientacionNueva5 %>" hidden>
             <td><input type='text' name='movimientos5'></td>
         </tr>
         <% end %>
